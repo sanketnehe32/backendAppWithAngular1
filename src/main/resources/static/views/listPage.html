@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h2>All Records</h2>
+  <div class="table-responsive">          
+  <table class="table" style="width:80%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Blood Group</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="each in  listOfBG">
+        <td>{{each.name}}</td>
+        <td>{{each.blood_group_type}}</td>
+        <td><i class="glyphicon glyphicon-pencil" title="edit" ng-click="edit(each.id)"></i></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<button class="btn btn-primary" style="margin-left:5%" ng-click="add()">Add New Record</button>
